@@ -27,4 +27,9 @@ Component state however, lives within that specific component. As such, it can o
 Application state is useful for data that needs to be accessed by multiple components at the same top-level while component state is useful for data that does not need to be used by any other component.
 
 4. Describe `redux-thunk`, what does it allow us to do? How does it change our `action-creators`?
+
+Redux Thunk is a middleware that lets you call action creators that return a function instead of an action object. It is a library that allows us to use middleware to intercept the normal Redux flow and make asynchronous API calls from action creators. Our `action-creators` can now return a function instead of an action and this will be given `dispatch` as an argument.
+
+That function receives the store’s dispatch method, which is then used to dispatch regular synchronous actions inside the body of the function once the asynchronous operations have completed.
+
 1. What is your favorite state management system you've learned and this sprint? Please explain why!
