@@ -32,4 +32,7 @@ Redux Thunk is a middleware that lets you call action creators that return a fun
 
 That function receives the store’s dispatch method, which is then used to dispatch regular synchronous actions inside the body of the function once the asynchronous operations have completed.
 
-1. What is your favorite state management system you've learned and this sprint? Please explain why!
+5. What is your favorite state management system you've learned and this sprint? Please explain why!
+   I like the Context API combination with the reducer pattern. When set up right, it's very powerful and clean without a lot of boilerplate code throughout the app. The Context API is great for low-frequency updates (e.g. theme changes, user authentication).
+
+However, when I'm working on high frequency updates especially on larger apps, I'll use Redux.
