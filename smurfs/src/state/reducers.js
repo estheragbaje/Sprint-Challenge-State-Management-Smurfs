@@ -6,7 +6,7 @@ const initialState = {
   isLoading: false
 };
 
-export function smurfsReducers(state = initialState, action) {
+export function smurfsReducer(state = initialState, action) {
   switch (action.type) {
     case types.IS_LOADING:
       return {

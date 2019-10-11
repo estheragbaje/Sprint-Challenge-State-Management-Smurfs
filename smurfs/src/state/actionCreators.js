@@ -1,4 +1,5 @@
 import * as types from "./actionTypes";
+import axios from "axios";
 
 export const getData = () => dispatch => {
   dispatch({ type: types.IS_LOADING });
