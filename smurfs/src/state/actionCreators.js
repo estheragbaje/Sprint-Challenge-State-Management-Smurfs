@@ -24,8 +24,8 @@ export async function submitToServer(data) {
     });
 
     let responseJson = await response.json();
-    debugger;
-    return responseJson.movies;
+    // debugger;
+    return responseJson;
   } catch (error) {
     console.error(error);
   }

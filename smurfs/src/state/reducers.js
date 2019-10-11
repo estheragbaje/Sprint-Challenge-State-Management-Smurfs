@@ -23,6 +23,11 @@ export function smurfsReducer(state = initialState, action) {
         ...state,
         error: action.payload
       };
+    case types.UPDATE_DATA:
+      return {
+        ...state,
+        data: action.payload
+      };
     default:
       return state;
   }

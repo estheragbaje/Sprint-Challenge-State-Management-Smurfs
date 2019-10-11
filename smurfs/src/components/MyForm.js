@@ -1,14 +1,21 @@
 import React, { Component } from "react";
 
-import { Field, reduxForm } from "redux-form";
+import { Field, reduxForm, reset } from "redux-form";
 import { submitToServer } from "../state/actionCreators";
+import { UPDATE_DATA } from "../state/actionTypes";
 
 class MyForm extends Component {
   submit = values => {
     console.log("submit inside form");
-    submitToServer(values).then(data => console.log(data));
+    submitToServer(values).then(data => {
+      //   debugger;
+      this.props.dispatch({ type: UPDATE_DATA, payload: data });
+      this.props.dispatch(reset("contact"));
+    });
   };
+
   render() {
+    // console.log(this.props);
     return (
       <form onSubmit={this.props.handleSubmit(this.submit)}>
         <div>
