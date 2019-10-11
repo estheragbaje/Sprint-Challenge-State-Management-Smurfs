@@ -3,6 +3,7 @@ import "./App.css";
 import { connect } from "react-redux";
 import * as actionCreators from "../state/actionCreators";
 import { Card } from "./Card";
+import MyForm from "./MyForm";
 
 export function App(props) {
   // debugger
@@ -16,6 +17,9 @@ export function App(props) {
       <div>Welcome to your state management version of Smurfs!</div>
       <div>Start inside of your `src/index.js` file!</div>
       <div>Have fun!</div>
+      <br />
+      <MyForm />
+      <br />
       <Card data={props.state.data} />
     </div>
   );

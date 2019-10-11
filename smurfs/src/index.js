@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { Provider } from "react-redux";
 import { combineReducers, createStore, compose, applyMiddleware } from "redux";
+import { reducer as formReducer } from "redux-form";
 import thunk from "redux-thunk";
 
 import * as reducers from "./state/reducers";
@@ -9,7 +10,8 @@ import "./index.css";
 import App from "./components/App";
 
 const monsterReducer = combineReducers({
-  state: reducers.smurfsReducer
+  state: reducers.smurfsReducer,
+  form: formReducer
 });
 
 //the store that stores everything
