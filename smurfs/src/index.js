@@ -28,6 +28,7 @@ const store = createStore(
 ReactDOM.render(
   <Provider store={store}>
     <ThemeProvider>
+      {/* <CSSReset /> */}
       <App />
     </ThemeProvider>
   </Provider>,

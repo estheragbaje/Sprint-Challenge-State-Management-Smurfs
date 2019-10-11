@@ -3,6 +3,7 @@ import React, { Component } from "react";
 import { Field, reduxForm, reset } from "redux-form";
 import { submitToServer } from "../state/actionCreators";
 import { UPDATE_DATA } from "../state/actionTypes";
+import { Button } from "@chakra-ui/core";
 
 class MyForm extends Component {
   submit = values => {
@@ -30,7 +31,9 @@ class MyForm extends Component {
           <label htmlFor="height">height</label>
           <Field name="height" component="input" type="text"></Field>
         </div>
-        <button type="submit">Submit</button>
+        <Button type="submit" variantColor="blue" size="lg" marginY="20px">
+          Submit
+        </Button>
       </form>
     );
   }
