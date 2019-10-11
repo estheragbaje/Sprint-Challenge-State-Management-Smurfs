@@ -4,6 +4,7 @@ import { Provider } from "react-redux";
 import { combineReducers, createStore, compose, applyMiddleware } from "redux";
 import { reducer as formReducer } from "redux-form";
 import thunk from "redux-thunk";
+import { ThemeProvider, CSSReset } from "@chakra-ui/core";
 
 import * as reducers from "./state/reducers";
 import "./index.css";
@@ -26,7 +27,9 @@ const store = createStore(
 
 ReactDOM.render(
   <Provider store={store}>
-    <App />
+    <ThemeProvider>
+      <App />
+    </ThemeProvider>
   </Provider>,
   document.getElementById("root")
 );
